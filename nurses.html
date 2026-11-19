@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For Nurses | Nurviant</title>
+  <meta name="description" content="Nurviant connects nurses with U.S. hospitals for permanent, direct-hire roles. The hospital pays our fee — never the nurse." />
+  <link rel="canonical" href="https://nurviant.com/nurses.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="For Nurses | Nurviant" />
+  <meta property="og:description" content="Permanent, direct-hire nursing roles with U.S. hospitals. Nurviant's fee is paid by the hospital, never by the nurse." />
+  <meta property="og:url" content="https://nurviant.com/nurses.html" />
+  <meta name="theme-color" content="#F5F9FA" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23062A37'/%3E%3Cpath d='M16 8v16M8 16h16' stroke='%23F5F9FA' stroke-width='1.6'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&family=Public+Sans:wght@300..600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #F5F9FA;
+      --surface: #FFFFFF;
+      --ink: #0B2230;
+      --muted: #4E6573;
+      --line: #D5E3E8;
+      --line-soft: #E7F0F3;
+      --accent: #0C5C77;
+      --accent-hover: #094B62;
+      --deep: #062A37;
+      --deep-line: #1C3D4A;
+      --deep-muted: #B7C6CC;
+      --deep-faint: #8FA6AE;
+      --wash: #E8F1F4;
+      --display: "Newsreader", Georgia, "Times New Roman", serif;
+      --body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      --wrap: 1180px;
+      --space-section: clamp(56px, 7vw, 88px);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.08; margin: 0; text-wrap: balance; }
+    p { margin: 0; }
+    a { color: var(--accent); }
+    ::selection { background: var(--wash); }
+    .wrap { width: min(100% - 40px, var(--wrap)); margin-inline: auto; }
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -60px;
+      z-index: 30;
+      padding: 10px 16px;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 6px;
+      transition: top .2s ease;
+    }
+    .skip-link:focus { top: 12px; color: #fff; }
+    :focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 70%, #fff); outline-offset: 3px; border-radius: 4px; }
+    .eyebrow {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: color-mix(in srgb, var(--paper) 92%, #fff);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+    .site-header .wrap { display: flex; align-items: center; gap: 28px; min-height: 64px; }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; }
+    .brand-name { font-family: var(--display); font-size: 1.5rem; line-height: 1; }
+    .brand-for { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); border-left: 1px solid var(--line); padding-left: 12px; }
+    .site-nav { margin-left: auto; }
+    .site-nav ul { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
+    .site-nav a { color: var(--ink); text-decoration: none; font-size: .95rem; }
+    .site-nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-family: var(--body);
+      font-size: .98rem;
+      font-weight: 600;
+      line-height: 1.2;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+    }
+    .button:hover { transform: translateY(-1px); }
+    .button-primary { background: var(--deep); color: #fff; }
+    .button-primary:hover { background: var(--accent-hover); }
+    .button-outline { background: transparent; color: var(--ink); border-color: var(--ink); }
+    .button-outline:hover { background: var(--ink); color: #fff; }
+    .button-light { background: #fff; color: var(--deep); }
+    .button-light:hover { background: var(--wash); }
+    .button-small { min-height: 40px; padding: 9px 18px; font-size: .92rem; }
+    .hero { position: relative; padding: clamp(56px, 7vw, 88px) 0 clamp(48px, 6vw, 72px); overflow: hidden; }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(to right, color-mix(in srgb, var(--accent) 9%, transparent) 1px, transparent 1px);
+      background-size: 25% 100%;
+      pointer-events: none;
+    }
+    .hero-grid { position: relative; display: grid; grid-template-columns: 1.14fr .86fr; gap: clamp(36px, 5vw, 64px); align-items: start; }
+    .hero-copy h1 { margin: 18px 0 20px; font-size: clamp(2.6rem, 5.4vw, 4.35rem); letter-spacing: -.015em; }
+    .hero-copy h1 em { font-style: italic; color: var(--accent); }
+    .hero-lede { max-width: 36rem; font-size: 1.16rem; color: var(--muted); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 30px 0 36px; }
+    .hero-spec {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--ink);
+      font-family: var(--mono);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .docket {
+      position: relative;
+      padding: 10px 26px 26px;
+      background: var(--surface);
+      border: 1px solid var(--ink);
+      border-radius: 14px;
+      box-shadow: 6px 6px 0 var(--wash);
+    }
+    .docket .stamp {
+      position: absolute;
+      top: -14px;
+      right: 20px;
+      transform: rotate(2.5deg);
+      padding: 6px 12px;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--mono);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      border-radius: 999px;
+    }
+    .docket h2 { margin: 18px 0 6px; font-size: 1.65rem; }
+    .docket > p { color: var(--muted); }
+    .docket table { width: 100%; margin-top: 18px; border-collapse: collapse; }
+    .docket th, .docket td { padding: 12px 0; border-top: 1px dashed var(--line); text-align: left; vertical-align: top; }
+    .docket th { font-weight: 600; }
+    .docket td { text-align: right; font-weight: 700; white-space: nowrap; }
+    .docket td.zero { color: var(--accent); }
+    .docket .note { margin-top: 14px; font-size: .9rem; color: var(--muted); }
+    section { padding: var(--space-section) 0; }
+    .section-intro { display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; padding-top: 22px; border-top: 1px solid var(--ink); margin-bottom: 44px; }
+    .section-intro .eyebrow { white-space: nowrap; }
+    .section-intro h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); letter-spacing: -.01em; }
+    .section-intro p { margin-left: auto; max-width: 27rem; color: var(--muted); }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .step { padding: 30px 28px 10px 0; margin-right: 28px; border-right: 1px solid var(--line); }
+    .step:last-child { padding-right: 0; margin-right: 0; border-right: 0; }
+    .step-number { font-family: var(--display); font-size: 2.5rem; line-height: 1; color: var(--accent); }
+    .step h3 { margin: 16px 0 8px; font-size: 1.4rem; line-height: 1.25; }
+    .step p { color: var(--muted); }
+    .fee-band { background: var(--wash); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); padding: 42px 0; }
+    .fee-band .wrap { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+    .fee-band .eyebrow { flex: 0 0 100%; }
+    .fee-band blockquote { margin: 0; max-width: 46rem; font-family: var(--display); font-size: clamp(1.4rem, 2.6vw, 1.9rem); line-height: 1.3; }
+    .fee-band .tag { margin-left: auto; padding: 8px 14px; background: #fff; border: 1px solid var(--ink); border-radius: 999px; font-family: var(--mono); font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+    .who-card { padding: 34px 34px 8px 0; }
+    .who-card + .who-card { padding: 34px 0 8px 34px; border-left: 1px solid var(--line); }
+    .who-card h3 { margin: 12px 0 6px; font-size: 1.55rem; }
+    .who-card > p { margin-bottom: 18px; color: var(--muted); }
+    .who-card ul { margin: 0; padding: 0; list-style: none; }
+    .who-card li { position: relative; padding: 12px 0 12px 26px; border-top: 1px solid var(--line); }
+    .who-card li::before { content: "+"; position: absolute; left: 2px; top: 11px; color: var(--accent); font-weight: 700; }
+    .who-foot { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); }
+    .who-foot strong { color: var(--ink); }
+    .faq-list { border-top: 1px solid var(--line); }
+    .faq-list details { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .faq-list summary { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; font-family: var(--display); font-size: 1.35rem; cursor: pointer; list-style: none; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { content: "+"; color: var(--accent); font-size: 1.5rem; line-height: 1; flex: none; }
+    .faq-list details[open] summary::after { content: "–"; }
+    .faq-list details p { max-width: 46rem; padding-top: 10px; color: var(--muted); }
+    .closing { position: relative; overflow: hidden; background: var(--deep); color: #EAF3F5; }
+    .closing::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(to right, rgb(255 255 255 / .06) 1px, transparent 1px);
+      background-size: 25% 100%;
+      pointer-events: none;
+    }
+    .closing .wrap { position: relative; }
+    .closing .eyebrow { color: var(--deep-faint); }
+    .closing h2 { margin: 16px 0 18px; max-width: 34rem; color: #fff; font-size: clamp(2rem, 3.8vw, 3rem); }
+    .closing p { max-width: 38rem; margin-bottom: 30px; color: var(--deep-muted); font-size: 1.12rem; }
+    .closing .actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .closing .text-link { color: #fff; text-underline-offset: 4px; }
+    .site-footer { padding: 34px 0 44px; font-size: .92rem; color: var(--muted); }
+    .site-footer .wrap { display: flex; justify-content: space-between; gap: 22px; flex-wrap: wrap; }
+    .site-footer a { color: var(--ink); }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    .hero-copy .eyebrow, .hero-copy h1, .hero-lede, .hero-actions, .hero-spec { animation: rise .7s ease both; }
+    .hero-lede { animation-delay: .08s; }
+    .hero-actions { animation-delay: .16s; }
+    .hero-spec { animation-delay: .24s; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero-copy .eyebrow, .hero-copy h1, .hero-lede, .hero-actions, .hero-spec { animation: none; }
+    }
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .step { padding-bottom: 26px; margin-right: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .step:last-child { border-bottom: 0; padding-bottom: 10px; }
+      .who-grid { grid-template-columns: 1fr; }
+      .who-card + .who-card { padding-left: 0; border-left: 0; }
+      .section-intro p { margin-left: 0; }
+    }
+    @media (max-width: 720px) {
+      .site-nav { display: none; }
+      .wrap { width: calc(100% - 40px); }
+      section { padding: 56px 0; }
+      .hero { padding: 56px 0; }
+      .docket { padding-left: 20px; padding-right: 20px; }
+    }
+    @media (max-width: 420px) {
+      .hero-actions .button { width: 100%; }
+      .closing .actions { align-items: flex-start; flex-direction: column; gap: 14px; }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Nurviant",
+      "url": "https://nurviant.com",
+      "email": "hello@nurviant.com",
+      "description": "Nurse recruitment agency connecting nurses with U.S. hospitals for permanent, direct-hire roles."
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="https://nurviant.com" aria-label="Nurviant — home">
+        <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#062A37" /><path d="M16 8v16M8 16h16" stroke="#F5F9FA" stroke-width="1.6" /></svg>
+        <span class="brand-name">Nurviant</span>
+        <span class="brand-for">For Nurses</span>
+      </a>
+      <nav class="site-nav" aria-label="Page sections">
+        <ul>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#who-we-help">Who we help</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <a class="button button-primary button-small" href="mailto:hello@nurviant.com">Email us</a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="page-title" data-od-id="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Nurse recruitment · United States</p>
+          <h1 id="page-title">Your next nursing role, <em>hired directly</em> by the hospital.</h1>
+          <p class="hero-lede">Nurviant connects nurses with U.S. hospitals for permanent, direct-hire roles. You’re employed by the hospital, and the hospital pays our fee — never you.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="mailto:hello@nurviant.com?subject=Nursing%20role%20inquiry%20%E2%80%94%20Nurviant">hello@nurviant.com</a>
+            <a class="button button-outline" href="#how-it-works">See how it works →</a>
+          </div>
+          <div class="hero-spec" aria-label="At a glance">
+            <span>Permanent roles</span>
+            <span>Direct hire</span>
+            <span>No cost to nurses</span>
+          </div>
+        </div>
+        <aside class="docket" aria-labelledby="docket-title">
+          <span class="stamp">Direct hire</span>
+          <h2 id="docket-title">Who pays Nurviant’s fee</h2>
+          <p>The hospital hires you onto its own staff — and pays our fee. No invoice ever reaches you.</p>
+          <table>
+            <tr><th scope="row">Nurse</th><td class="zero">$0</td></tr>
+            <tr><th scope="row">Hiring hospital</th><td>Nurviant’s fee</td></tr>
+          </table>
+          <p class="note">That is the whole arrangement. There is no fee, charge, or deduction for the nurse at any point.</p>
+        </aside>
+      </div>
+    </section>
+    <section id="how-it-works" aria-labelledby="how-title" data-od-id="how-it-works">
+      <div class="wrap">
+        <div class="section-intro">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Three steps, and the hospital does the hiring.</h2>
+          <p>Nurviant is a recruiter, not an employer. You join the hospital’s staff, not a contract.</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <p class="step-number" aria-hidden="true">01</p>
+            <h3>Tell us your specialty and where you want to work.</h3>
+            <p>Send a note to <a href="mailto:hello@nurviant.com" style="border-bottom:1px solid var(--line);">hello@nurviant.com</a> with your specialty, your experience, and the states or cities you’d consider. That’s enough to start.</p>
+          </li>
+          <li class="step">
+            <p class="step-number" aria-hidden="true">02</p>
+            <h3>We match you with hospitals that are hiring directly.</h3>
+            <p>We look for permanent openings that fit your specialty and your location, then introduce you to the hospitals hiring for them.</p>
+          </li>
+          <li class="step">
+            <p class="step-number" aria-hidden="true">03</p>
+            <h3>The hospital hires you — Nurviant’s fee is paid by the hospital, never by the nurse.</h3>
+            <p>You interview with the hospital and, when it’s a fit, you’re hired onto their staff. Our fee is settled between Nurviant and the hospital.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <div class="fee-band" data-od-id="fee">
+      <div class="wrap">
+        <p class="eyebrow">The fee, plainly</p>
+        <blockquote>“There is no version of this where a nurse writes us a check.”</blockquote>
+        <span class="tag">No cost to nurses</span>
+      </div>
+    </div>
+    <section id="who-we-help" aria-labelledby="who-title" data-od-id="who-we-help">
+      <div class="wrap">
+        <div class="section-intro">
+          <p class="eyebrow">Who we help</p>
+          <h2 id="who-title">Two kinds of nurses, one direct path.</h2>
+          <p>Whether you trained in the U.S. or abroad, the destination is the same: a permanent role, hired directly by the hospital.</p>
+        </div>
+        <div class="who-grid">
+          <article class="who-card">
+            <p class="eyebrow">U.S. nurses</p>
+            <h3>You’re licensed here and ready for a permanent post.</h3>
+            <p>You want to be on the hospital’s staff — not on a short-term contract. Every role we work on is permanent and direct-hire.</p>
+            <ul>
+              <li>Permanent, direct-hire roles only</li>
+              <li>Employed by the hospital, not by Nurviant</li>
+              <li>Our fee is paid by the hospital</li>
+            </ul>
+          </article>
+          <article class="who-card">
+            <p class="eyebrow">Internationally educated nurses</p>
+            <h3>You trained abroad and you’re building a U.S. career.</h3>
+            <p>We work with nurses educated outside the U.S. who are pursuing permanent hospital roles. Each hospital’s requirements are explained up front.</p>
+            <ul>
+              <li>Direct-hire roles with U.S. hospitals</li>
+              <li>Hospital requirements explained up front</li>
+              <li>No fee to you at any stage</li>
+            </ul>
+          </article>
+        </div>
+        <p class="who-foot"><strong>A note on what we don’t do:</strong> If you’re looking for travel contracts or per-diem shifts, we’re not the right fit — and we’d rather tell you that here than waste your time.</p>
+      </div>
+    </section>
+    <section id="faq" aria-labelledby="faq-title" data-od-id="faq">
+      <div class="wrap">
+        <div class="section-intro">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Straight answers.</h2>
+          <p>If your question isn’t here, one email will answer it.</p>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>Does it cost me anything?</summary>
+            <p>No. Hospitals pay our fee. Nurses never pay Nurviant anything — not to start, not at offer, not after you’re hired.</p>
+          </details>
+          <details>
+            <summary>What roles?</summary>
+            <p>Permanent, direct-hire nursing roles with U.S. hospitals. We don’t work on travel contracts or per-diem shifts.</p>
+          </details>
+          <details>
+            <summary>How do I start?</summary>
+            <p>Send an inquiry to <a href="mailto:hello@nurviant.com">hello@nurviant.com</a>. Tell us your specialty and where you’d like to work, and we’ll take it from there.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="closing" aria-labelledby="closing-title" data-od-id="closing">
+      <div class="wrap">
+        <p class="eyebrow">Start here</p>
+        <h2 id="closing-title">One email is enough to start.</h2>
+        <p>Tell us your specialty and where you want to work. If a hospital is hiring directly for it, we’ll find the way in — and the hospital pays our fee, never you.</p>
+        <div class="actions">
+          <a class="button button-light" href="mailto:hello@nurviant.com?subject=Nursing%20role%20inquiry%20%E2%80%94%20Nurviant">Email hello@nurviant.com</a>
+          <a class="text-link" href="https://nurviant.com">nurviant.com ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Nurviant · Nurse recruitment for U.S. hospitals</span>
+      <span><a href="mailto:hello@nurviant.com">hello@nurviant.com</a> · <a href="https://nurviant.com">nurviant.com</a></span>
+    </div>
+  </footer>
+</body>
+</html>
