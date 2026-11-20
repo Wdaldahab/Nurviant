@@ -5,6 +5,7 @@ const fs = require('node:fs');
  const browser = await chromium.launch({headless:true, channel:"chrome"});
  const page = await browser.newPage({viewport:{width:1440,height:1000}});
  const errors=[];page.on('pageerror', e=>errors.push(e.message));
+ const failed=[];page.on('response', r=>{if(r.status()>=400)failed.push(r.status()+' '+r.url())});
  await page.goto('http://localhost:8765');
  await page.screenshot({path:process.env.OUTPUT_DIR+'/desktop.png',fullPage:true});
  const tops=await page.locator('.card button').evaluateAll(buttons=>buttons.map(b=>Math.round(b.getBoundingClientRect().top)));
@@ -55,6 +56,19 @@ const fs = require('node:fs');
     await page.locator(selector).click();
     assert.equal(await page.evaluate(()=>document.getElementById('privacy').open),true,'privacy notice did not open from '+selector);
   }
+ // The icons, link preview and crawler files named by the page exist. Tags point at https://nurviant.com, so request the same paths locally.
+ const head=await page.evaluate(()=>({icons:[...document.querySelectorAll('link[rel~=icon],link[rel=apple-touch-icon]')].map(l=>l.href),image:document.querySelector('meta[property="og:image"]')?.content,card:document.querySelector('meta[name="twitter:card"]')?.content,canonical:document.querySelector('link[rel=canonical]').href}));
+ const get=async url=>{const r=await page.request.get('http://localhost:8765'+new URL(url,'http://localhost:8765').pathname);assert.equal(r.status(),200,'missing '+url);return r};
+ assert.equal(head.icons.length,3,'expected the .ico, .svg and apple-touch icons in <head>');for (const url of head.icons) await get(url);
+ assert.ok(head.image,'og:image is missing');
+ const image=await (await get(head.image)).body();
+ assert.equal(image.readUInt32BE(16)+'x'+image.readUInt32BE(20),'1200x630','og:image size');
+ assert.equal(head.card,'summary_large_image');
+ const sitemap=await (await get('/sitemap.xml')).text();
+ assert.ok(sitemap.includes('<loc>'+head.canonical+'</loc>'),'sitemap lacks the canonical home page');
+ for (const [,loc] of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) await get(loc);
+ assert.match(await (await get('/robots.txt')).text(),/^Sitemap: https:\/\/nurviant\.com\/sitemap\.xml$/m);
  assert.deepEqual(errors,[]);
- await browser.close();console.log('PASS: filtering, role selection, separate form payloads, mocked delivery failures/success, responsive widths, mobile navigation, privacy notice links, no browser errors. No inquiries sent.');
+ assert.deepEqual(failed,[]);
+ await browser.close();console.log('PASS: filtering, role selection, separate form payloads, mocked delivery failures/success, responsive widths, mobile navigation, privacy notice links, contrast, card alignment, icon/link-preview/sitemap files, no browser errors or failed requests. No inquiries sent.');
 })().catch(e=>{console.error(e);process.exit(1)});
