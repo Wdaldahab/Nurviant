@@ -39,6 +39,11 @@ const fs = require('node:fs');
  assert.equal(await page.locator('#navigation').isVisible(),true);await page.locator('#navigation a').first().click();
  assert.equal(await page.locator('.menu-toggle').getAttribute('aria-expanded'),'false');
  await page.screenshot({path:process.env.OUTPUT_DIR+'/mobile.png',fullPage:true});
+  for (const selector of ['.consent a','footer a[href*=privacy]']) {
+    await page.evaluate(()=>{document.getElementById('privacy').open=false});
+    await page.locator(selector).click();
+    assert.equal(await page.evaluate(()=>document.getElementById('privacy').open),true,'privacy notice did not open from '+selector);
+  }
  assert.deepEqual(errors,[]);
- await browser.close();console.log('PASS: filtering, role selection, separate form payloads, mocked delivery failures/success, responsive widths, mobile navigation, no browser errors. No inquiries sent.');
+ await browser.close();console.log('PASS: filtering, role selection, separate form payloads, mocked delivery failures/success, responsive widths, mobile navigation, privacy notice links, no browser errors. No inquiries sent.');
 })().catch(e=>{console.error(e);process.exit(1)});

@@ -39,6 +39,14 @@ document.getElementById('navigation').addEventListener('click', event => {
     document.getElementById('navigation').classList.remove('open');
   }
 });
+function openPrivacy() {
+  document.getElementById('privacy').open = true;
+}
+document.querySelectorAll('a[href="#privacy"]').forEach(link => link.addEventListener('click', openPrivacy));
+window.addEventListener('hashchange', () => {
+  if (location.hash === '#privacy') openPrivacy();
+});
+if (location.hash === '#privacy') openPrivacy();
 const roles=[['Critical care','Intensive Care Nurse','Care for patients with complex needs in an ICU team.'],['Emergency','Emergency Department Nurse','Bring calm, clinical judgment, and care to urgent situations.'],['Medical-surgical','Medical-Surgical Nurse','Support recovery through attentive, coordinated bedside care.']];function render(){const q=document.getElementById('search').value.toLowerCase(),s=document.getElementById('specialty').value;const found=roles.filter(r=>(!s||r[0]===s)&&r.join(' ').toLowerCase().includes(q));document.getElementById('cards').innerHTML=found.map(r=>'<article class="card"><span class="tag">'+r[0]+'</span><span class="tag">Example role</span><h3>'+r[1]+'</h3><p class="muted">'+r[2]+'</p><p class="muted">Location and terms depend on future vacancies.</p><button data-specialty="'+r[0]+'" onclick="choose(this.dataset.specialty)">Register interest ↗</button></article>').join('');document.getElementById('empty').hidden=found.length>0}function choose(s){setType('nurse');document.querySelector('[name=specialty]').value=s;document.getElementById('join').scrollIntoView()}document.getElementById('search').oninput=render;document.getElementById('specialty').onchange=render;render();
 function inquiryData() {
   const data = Object.fromEntries(new FormData(form));

@@ -1,6 +1,6 @@
 # Nurviant review and launch notes
 
-This revision is prepared for review; it has not been deployed.
+This revision was merged to `main` in PR #1 on 2026-10-23, and the GitHub Pages workflow publishes `main`.
 
 ## What changed
 - Separate nurse and hospital intake fields; hidden fields are disabled and omitted from the inquiry.
@@ -19,6 +19,6 @@ No real inquiries were sent during development. Validate delivery end to end wit
 ## Preview and validation
 Static site, no build step. Serve this directory with `python3 -m http.server 8765 --bind 127.0.0.1`, then open http://localhost:8765.
 
-`node --check app.js` checks syntax. `tests/browser.cjs` uses Playwright with installed Chrome. Set `PLAYWRIGHT_PATH` to a Playwright installation if it is not on the module search path, and `OUTPUT_DIR` to a screenshot directory. The browser suite covers filtering, specialty choice, audience-specific payloads, mocked provider responses, mobile navigation, responsive overflow, and runtime errors. It intercepts delivery requests; it does not send inquiries.
+`node --check app.js` checks syntax. `tests/browser.cjs` uses Playwright with installed Chrome. Set `PLAYWRIGHT_PATH` to a Playwright installation if it is not on the module search path, and `OUTPUT_DIR` to a screenshot directory. The browser suite covers filtering, specialty choice, audience-specific payloads, mocked provider responses, mobile navigation, privacy notice links, responsive overflow, and runtime errors. It intercepts delivery requests; it does not send inquiries.
 
-GitHub CLI was unauthenticated during implementation, so no branch was pushed and no PR was created. Review the supplied patch/archive; merge and deployment remain separate owner actions.
+Merging to `main` publishes the site through the GitHub Pages workflow, so review changes before merging.
