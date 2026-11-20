@@ -17,6 +17,10 @@ This revision was merged to `main` in PR #1 on 2026-10-23, and the GitHub Pages 
 - Icons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`), a 1200×630 link-preview image (`og-image.png`), `robots.txt`, and `sitemap.xml`. The sitemap also lists `nurses.html`, which the home page does not link to yet; delete that line to keep the page unlisted.
 - `tools/render-assets.cjs` regenerates the icons and the preview image. The image reuses the home page headline and illustration, so re-run the script (usage is in its header) whenever either changes.
 
+## Settings and steps outside the code
+- **Enforce HTTPS.** In the GitHub repository open Settings → Pages and tick "Enforce HTTPS". It is a repository setting, so no pull request can change it. Until it is on, `http://nurviant.com` serves the page instead of redirecting to `https://`, and browsers label plain-HTTP pages "Not secure", which matters on a page with a form. Verify with `curl -sI http://nurviant.com/`: expect a 301 with `location: https://nurviant.com/`.
+- **Refresh link previews after a deploy.** Each network caches the preview it saw first. Re-scrape the URL with LinkedIn's Post Inspector and Facebook's Sharing Debugger; other apps update when their cache expires.
+
 ## Business decisions required before online intake
 Confirm the legal operator name and contact address, inbox ownership and monitoring, retention/deletion period, access controls, intended sharing with hospitals or vendors, and the final privacy notice. The current page explicitly describes the email/download flow and says these arrangements are pending. Confirm recruitment claims, service geography, applicable business requirements, and any actual vacancies before advertising them.
 
