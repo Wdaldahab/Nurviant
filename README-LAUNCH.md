@@ -13,7 +13,7 @@ This revision was merged to `main` in PR #1 on 2026-10-23, and the GitHub Pages 
 
 ## Launch polish
 - The home page headline speaks to internationally educated nurses. It promises no sponsorship, placement, or eligibility; keep those caveats if the wording changes.
-- Body text and form-field borders meet WCAG AA contrast (4.5:1 and 3:1). The browser suite fails if they regress.
+- Muted text, the delivery note, and form-field borders meet WCAG AA contrast (4.5:1 for text, 3:1 for borders). The browser suite fails if they regress; other text was checked with Lighthouse but has no test.
 - Icons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`), a 1200×630 link-preview image (`og-image.png`), `robots.txt`, and `sitemap.xml`. The sitemap also lists `nurses.html`, which the home page does not link to yet; delete that line to keep the page unlisted.
 - `tools/render-assets.cjs` regenerates the icons and the preview image. The image reuses the home page headline and illustration, so re-run the script (usage is in its header) whenever either changes.
 
